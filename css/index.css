@@ -1,0 +1,17 @@
+header {
+  height: 41rem;
+  width: 100%;
+  border: 1px solid blue;
+}
+
+nav {
+  height: 9rem;
+  width: 100%;
+  border: 1px solid red;
+}
+
+footer {
+  height: 29.8rem;
+  width: 100%;
+  border: 1px solid black;
+}

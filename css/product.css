@@ -1,0 +1,17 @@
+header {
+  width: 100%;
+  height: 9rem;
+  border: 1px solid blue;
+}
+
+main {
+  width: 100%;
+  height: 123.9rem;
+  border: 1px solid red;
+}
+
+footer {
+  width: 100%;
+  height: 29.8rem;
+  border: 1px solid green;
+}

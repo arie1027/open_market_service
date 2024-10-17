@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'SpoqaHanSansNeo-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 10px;
+  font-family: "SpoqaHanSansNeo-Regular";
+}
+
+:root {
+  --main-color: #ffffff;
+  --border-color: #c4c4c4;
+  --point-color: #21bf48;
+  --font-color: #767676;
+  --error-color: #eb5757;
+}
