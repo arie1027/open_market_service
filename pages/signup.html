@@ -1,3 +1,4 @@
+
 <!-- 회원 가입 페이지 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +14,59 @@
   <header>
     로고입니다.
   </header>
-
-  <article>
+  <main>
+    <article>
     회원 가입 페이지입니다.
-  </article>
+      <h2 class="sr-only">회원 가입</h2>
+      <!-- 회원가입 버튼 -->
+      <button type="button" class="buyer-signup">구매회원가입</button>
+      <button type="button" class="seller-signup">판매회원가입</button>
+      <!-- 회원가입정보 입력창 -->
+      <form action="#" method="post" class="signup-form">
+        <fieldset>
+          <legend class="sr-only">회원가입정보 입력창</legend>
+          <label for="join-id">아이디</label>
+          <input type="text" name="username" id="join-id" autocomplete="username" pattern="" required>
+          <button type="submit" class="duplicate-check">중복확인</button>
+          <!-- 중복확인 메세지 알림 p태그 -->
+          <p class=""></p>
+          <label for="join-pw">비밀번호</label>
+          <input type="password" name="password" id="join-pw" autocomplete="new-password" pattern="" required>
+          <p class=""></p>
+
+          <label for="check-pw">비밀번호 재확인</label>
+          <input type="password" name="password" id="check-pw" required>
+          <p class=""></p>
+
+          <label for="name">이름</label>
+          <input type="text" name="name" id="name" autocomplete="name" required>
+          <p class=""></p>
+          <!-- 휴대폰 번호 입력창 -->
+          <label for="cellphone">휴대폰번호</label>
+          <div class="cellphone">
+            <select name="first-num" id="first-num" required>
+              <option value="010">010</option>
+              <option value="011">011</option>
+              <option value="016">016</option>
+              <option value="017">017</option>
+              <option value="018">018</option>
+              <option value="019">019</option>
+            </select>
+            <input type="text" name="middle-num" id="middle-num" pattern="\d{4}" maxlength="4" required>
+            <input type="text" name="last-num" id="last-num" pattern="\d{4}" maxlength="4" required>
+          </div>
+          <p class=""></p>
+          <!-- 약관 동의 -->
+          <div class="agree">
+            <input type="checkbox" name="agree" class="checkbox">
+            <label for="agree" class="agree">호두샵의 <span>이용약관</span> 및 <span>개인정보처리방침</span>에 대한 내용을 확인하였고 동의합니다.</label>
+            <!-- 가입하기 버튼 -->
+            <button type="submit" class="signup-btn" onclick="location.href='login.html' " disabled>가입하기</button>
+          </div>
+        </fieldset>
+      </form>
+    </article>
+  </main>
   <script src="../js/signup.js"></script>
 </body>
 </html>
