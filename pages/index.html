@@ -16,11 +16,30 @@
   <header>
     <nav>
       nav입니다.
-      <a href="">
+      <!-- 로고 -->
+      <img src="../assets/icons/Logo-hodu.png" alt="HODU" onclick="location.href='index.html' ">
+      <!-- 상품 검색 바 -->
+      <form action="#" method="get">
+        <label for="search" class="sr-only">상품 검색</label>
+        <input type="text" id="search" name="search" placeholder="상품을 검색해보세요!">
+        <button class="search-btn">
+          <img src="../assets/icons/search.svg" alt="상품 검색">
+        </button>
+      </form>
+      <!-- 장바구니 -->
+      <a href="#" class="cart-btn">
+        <img src="../assets/icons/icon-shopping-cart.svg" alt="장바구니 아이콘">
         장바구니
       </a>
-      <a href="./login.html">
+      <!-- 로그인 페이지 이동 -->
+      <a href="./login.html" class="login-btn">
+        <img src="../assets/icons/icon-user.svg" alt="로그인 아이콘">
         로그인
+      </a>
+      <!-- 로그인 시 마이 페이지 버튼으로 변경 -->
+      <a href="#" class="mypage-btn" hidden>
+        <img src="../assets/icons/icon-user.svg" alt="마이 페이지 아이콘">
+        마이 페이지
       </a>
     </nav>
     header입니다.
