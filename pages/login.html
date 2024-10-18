@@ -13,13 +13,33 @@
   <header>
     로고 입니다.
   </header>
-
-  <article>
-    로그인 페이지입니다.
-    <a href="./signup.html">
-      회원가입
-    </a>
-  </article>
+  <main>
+    <article>
+      로그인 페이지입니다.
+      <h2 class="sr-only">로그인</h2>
+      <!-- 로그인 버튼 -->
+      <button type="button" class="buyer-login">구매회원 로그인</button>
+      <button type="button" class="seller-login">판매회원 로그인</button>
+      <!-- 아이디 및 비밀번호 입력 창 -->
+      <form action="#" method="post" class="login-form">
+        <fieldset>
+          <legend class="sr-only">아이디 및 비밀번호 입력 창</legend>
+          <label for="id" class="sr-only">아이디</label>
+          <input type="text" name="username" id="id" placeholder="아이디" autocomplete="username" >
+          <label for="pw" class="sr-only">비밀번호</label>
+          <input type="password" name="password" id="pw" placeholder="비밀번호" autocomplete="current-password">
+          <!-- 로그인 오류 메세지 p 태그 -->
+          <p></p>
+          <button type="submit" class="login-btn">로그인</button>
+        </fieldset>
+      </form>
+    </article>
+    <!-- 회원가입 및 비밀번호 찾기 페이지 이동 -->
+    <aside>
+      <a href="./signup.html">회원가입</a>
+      <a href="#">비밀번호 찾기</a>
+    </aside>
+  </main>
 
   <footer>
     footer 입니다.
