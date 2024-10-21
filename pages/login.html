@@ -3,181 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Form</title>
-  <style>
-    html {
-      font-size: 10px;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .logo {
-      font-size: 5.5rem;
-      font-weight: bold;
-      color: limegreen;
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-
-    .container {
-      height: 30rem;
-      width: 40rem;
-      border-radius: 1rem;
-      border-top: 0;
-      background-color: gainsboro;
-    }
-
-    .tab {
-      height: 18%;
-      width: 100%;
-      display: flex;
-      background-color: white;
-    } 
-    
-    .buyer, .seller {
-      font-weight: bold;
-      height: 115%;
-      width: 50%;
-      border: 0.1rem solid silver;
-      border-radius: 1rem 1rem 0 0;
-      border-bottom: 0;
-      background-color: gainsboro;
-      transition: background-color 0.1s;
-      cursor: pointer;
-      padding-bottom: 1rem;
-    }
-
-    .buyer.active, .seller.active {
-      background-color: white;
-    }
-
-    .border-box {
-      height: 10%;
-      width: 100%;
-      display: flex;
-    }
-
-    .border-box-left, .border-box-right {
-      height: 100%;
-      width: 50%;;
-      background-color: white;
-      border: 0.1rem solid silver;
-      border-bottom: 0;
-    }
-
-    .border-box-left {
-      border-radius: 1rem 0 0 0;
-      border-right: 0;
-    }
-
-    .border-box-right {
-      border-radius: 0 1rem 0 0;
-      border-left: 0;
-    }
-
-    .border-box-left.active {
-      border-top: 0;
-      border-radius: 0;
-    }
-
-    .border-box-right.active {
-      border-top: 0;
-      border-radius: 0;
-    }
-
-    .input-box {
-      height: 72%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: white;
-      border: 0.1rem solid silver;
-      border-radius: 0 0 1rem 1rem;
-      border-top: 0;
-      box-sizing: border-box;
-    }
-
-    form {
-      height: 100%;
-      width: 90%;
-      padding-bottom: 10%;
-    }
-
-    fieldset {
-      height: 100%;
-      width: 95%;
-      border: 0;
-    }
-
-    .user-name, .password {
-      height: 22%;
-      width: 100%;
-      box-sizing: border-box;
-      border: 0.1rem solid silver;
-      border-top: 0;
-      border-left: 0;
-      border-right: 0;
-      margin-bottom: 1.5rem;
-    }
-
-    .caution {
-      visibility: hidden;
-      height: 10%;
-      width: 100%;
-      padding-bottom: 0;
-      color: red;
-    }
-
-    .login {
-      height: 28%;
-      width: 100%;
-      box-sizing: border-box;
-      border: 0;
-      background-color: limegreen;
-      color: white;
-      font-weight: bold;
-      text-align: center;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-
-    .login:hover {
-      background-color: green;
-    }
-
-    .other-box {
-      margin-top: 1.5rem;
-      display: flex;
-      justify-content: center;
-    }
-
-    .sign-up, .password-find {
-      border: 0;
-      background-color: transparent;
-      cursor: pointer;
-    }
-
-    .between {
-      font-size: 1.3rem;
-      margin-left: 0.5rem;
-      margin-right: 0.5rem;
-    }
-
-  </style>
+  <title>HODU Login</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
 
   <!-- 로고 -->
   <div class="logo">
-    HODU
+    <a href="./index.html">
+      <img src="../assets/icons/Logo-hodu.png" alt="HODU">
+    </a>
   </div>
 
   <!-- 회원 종류 전환탭 -->
@@ -200,8 +37,8 @@
     <div class="input-box">
       <form class="login-form" onsubmit="handleLogin(event)">
         <fieldset>
-          <input class="user-name" name="username" type="text" placeholder="아이디">
-          <input class="password" name="password" type="password" placeholder="비밀번호">
+          <input class="user-name" name="username" type="text" placeholder="아이디" autocomplete="username">
+          <input class="password" name="password" type="password" placeholder="비밀번호" autocomplete="current-password">
           <div class="caution">아이디 또는 비밀번호가 일치하지 않습니다.</div>
           <button class="login" name="login">로그인</button>
         </fieldset>
@@ -216,84 +53,6 @@
     </div>
   </div>
 
-  <script>
-    
-    // 탭전환 함수
-    const handleTab = (userType) => {
-      const buyerButton = document.querySelector('.buyer');
-      const sellerButton = document.querySelector('.seller');
-      const borderBoxLeft = document.querySelector('.border-box-left');
-      const borderBoxRight = document.querySelector('.border-box-right');
-
-      if (userType === 'buyer') {
-        buyerButton.classList.add('active');
-        sellerButton.classList.remove('active');
-        borderBoxLeft.classList.add('active');
-        borderBoxRight.classList.remove('active');
-        
-      } else if (userType === 'seller') {
-        sellerButton.classList.add('active');
-        buyerButton.classList.remove('active');
-        borderBoxRight.classList.add('active');
-        borderBoxLeft.classList.remove('active');
-      }
-    }
-
-    // 로그인 요청 함수
-    const handleLogin = (event) => {
-      event.preventDefault();
-
-      const caution = document.querySelector('.caution');
-
-      const formData = new FormData(event.target);
-      const username = formData.get('username');
-      const password = formData.get('password');
-      const apiUrl = 'https://estapi.openmarket.weniv.co.kr'
-
-      console.log(username);
-      console.log(password);
-      
-      // 로그인 요청
-      fetch(`${apiUrl}/accounts/login/`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          username: username,
-          password: password,
-          login_type: "BUYER"
-        })
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('로그인 실패');
-          }
-          return response.json();
-        })
-        // 로그인 성공시 토큰 저장 및 이전 페이지 이동
-        .then((data) => {
-          console.log('로그인 성공', data);
-          console.log(data.access);
-          console.log(data.refresh);
-          const accessToken = data.access;
-          const refreshToken = data.refresh;
-          localStorage.setItem('accessToken', accessToken);
-          localStorage.setItem('refreshToken', refreshToken);
-          // window.history.back();
-        })
-        // 로그인 실패시 경고문구 출력
-        .catch((error) => {
-          console.error(error);
-          caution.style.visibility = 'visible';
-        });
-    };
-
-    // 회원가입 이동 함수
-    const navigationToSignUp = () => {
-      window.location.href = 'signup.html';
-    }
-  </script>
-
+  <script src="../js/login.js"></script>
 </body>
 </html>
