@@ -21,31 +21,31 @@ body {
   width: 40rem;
   border-radius: 1rem;
   border-top: 0;
-  background-color: var(--main-color);
+  background-color: gainsboro;
 }
 
 .tab {
   height: 18%;
   width: 100%;
   display: flex;
-  background-color: var(--main-color);
+  background-color: white;
 } 
 
 .buyer, .seller {
   font-weight: bold;
   height: 115%;
   width: 50%;
-  border: 0.1rem solid var(--border-color);
+  border: 0.1rem solid silver;
   border-radius: 1rem 1rem 0 0;
   border-bottom: 0;
-  background-color: var(--main-color);
+  background-color: gainsboro;
   transition: background-color 0.1s;
   cursor: pointer;
   padding-bottom: 1rem;
 }
 
 .buyer.active, .seller.active {
-  background-color: var(--main-color);
+  background-color: white;
 }
 
 .border-box {
@@ -57,8 +57,8 @@ body {
 .border-box-left, .border-box-right {
   height: 100%;
   width: 50%;;
-  background-color: var(--main-color);
-  border: 0.1rem solid var(--border-color);
+  background-color: white;
+  border: 0.1rem solid silver;
   border-bottom: 0;
 }
 
@@ -89,8 +89,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--main-color);
-  border: 0.1rem solid var(--border-color);
+  background-color: white;
+  border: 0.1rem solid silver;
   border-radius: 0 0 1rem 1rem;
   border-top: 0;
   box-sizing: border-box;
@@ -112,7 +112,7 @@ fieldset {
   height: 22%;
   width: 100%;
   box-sizing: border-box;
-  border: 0.1rem solid var(--border-color);
+  border: 0.1rem solid silver;
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -124,7 +124,7 @@ fieldset {
   height: 10%;
   width: 100%;
   padding-bottom: 0;
-  color: var(--error-color);
+  color: red;
 }
 
 .login {
@@ -132,8 +132,8 @@ fieldset {
   width: 100%;
   box-sizing: border-box;
   border: 0;
-  background-color: var(--point-color);
-  color: var(--main-color);
+  background-color: limegreen;
+  color: white;
   font-weight: bold;
   text-align: center;
   border-radius: 0.5rem;
@@ -142,7 +142,7 @@ fieldset {
 }
 
 .login:hover {
-  background-color: var(--point-color);
+  background-color: green;
 }
 
 .other-box {
